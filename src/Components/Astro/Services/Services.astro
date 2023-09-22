@@ -1,0 +1,67 @@
+---
+import styles from "./Services.module.scss";
+//edit the heading to you liking
+const heading = "Auto care is our business.";
+//It is a template just add you own content and it will be rendered
+const text = `At Jose's Automotive, we take pride in bringing expertise to every repair and maintenance need,
+ combined with providing the best prices and customer service around. Here’s what we have to offer:`;
+
+//easy to add or remove the items you need
+//need 10 items ? just add more to the array list
+const services = [
+  {
+    title: "FOUR CONVENIENT LOCATIONS",
+    subtitle: "Come visit us in Dinkytown, Nicollet, Nokomis, or Uptown!",
+    img: "../../../../public/Assets/img1.jpg",
+  },
+  {
+    title: "DISCOUNTS + SPECIAL PROMOTIONS",
+    subtitle:
+      "Want to save some money? We can help! Take advantage of our discounts.",
+    img: "../../../../public/Assets/img2.jpg",
+  },
+  {
+    title: "EXPERT REPAIR SERVICES",
+    subtitle:
+      "We offer a range of services provided by skilled and ASE-certified auto technicians.",
+    img: "../../../../public/Assets/img3.png",
+  },
+  {
+    title: "SUPERIOR CUSTOMER SERVICE",
+    subtitle:
+      "We are focused on great in-house personnel and old fashioned customer service.",
+    img: "../../../../public/Assets/img4.jpg",
+  },
+  {
+    title: "MODERN DIAGNOSTIC EQUIPMENT",
+    subtitle:
+      "We keep up with the most current technologies to offer the best service possible.",
+    img: "../../../../public/Assets/img5.webp",
+  },
+  {
+    title: "FREE CONSULTATIONS + UPFRONT PRICING",
+    subtitle:
+      "Got a question about your car? We provide free consultations and transparent pricing.",
+    img: "../../../../public/Assets/img6.jpg",
+  },
+];
+---
+
+<section id="services" class={`container ${styles.services}`}>
+  <div class={styles.top}>
+    <h3 class={styles.heading}>{heading}</h3>
+    <p class={styles.text}>{text}</p>
+  </div>
+  <div class={styles.bottom}>
+    {
+      services.map((itm) => (
+        <div class={styles.itm} style={{ backgroundImage: `url(${itm.img})` }}>
+          <div class={styles.overlay}>
+            <p class={styles.title}>{itm.title}</p>
+            <p class={styles.subtitle}>{itm.subtitle}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

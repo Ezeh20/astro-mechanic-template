@@ -1,7 +1,16 @@
 ---
 import styles from "./Hero.module.scss";
+const header = `Auto care that is fast ?`;
+const writeUp = `You got a guy. Here at Jose's Automotive, we take care of the cars and people in our community, and we always provide quality without compromise.`;
+const label = "Book an appointment";
 ---
 
 <section class={styles.hero}>
-  <p>hero</p>
+  <div class={styles.overlay}>
+    <div class={`container ${styles.woo}`}>
+      <h3 class={styles.header}>{header}</h3>
+      <p class={styles.writeUp}>{writeUp}</p>
+      <button class={styles.btn}>{label}</button>
+    </div>
+  </div>
 </section>

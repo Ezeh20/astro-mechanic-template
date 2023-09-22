@@ -1,3 +1,105 @@
-.hero{
-    background: #000;
+.hero {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background: url('/public/Assets/hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media screen and (min-width: 768px) {
+        height: 60vh;
+    }
+
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, .8);
+
+        .woo {
+            height: 50vh;
+            display: flex;
+            gap: 2rem;
+            flex-direction: column;
+            margin-top: 5rem;
+            animation: hero 1s ease-in-out forwards;
+
+            .header {
+                font-size: 24px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+            .writeUp {
+                max-width: 600px;
+
+            }
+
+            @media screen and (min-width: 768px) {
+                .woo {
+                    height: 60vh;
+                }
+
+                .header {
+                    font-size: 50px;
+                    font-weight: 500;
+                }
+
+                .writeUp {
+                    font-size: 18px;
+                    margin-bottom: 3rem;
+                }
+            }
+
+            @media screen and (min-width:1200px) {
+                .header {
+                    font-size: 64px;
+                }
+
+                .writeUp {
+                    max-width: 500px;
+                }
+            }
+
+            .btn {
+                width: max-content;
+                color: var(--primary-color);
+                border: 1px solid var(--secondary-color);
+                padding: 2rem;
+                font-size: 18px;
+                opacity: 0;
+                animation: btn 500ms linear 1s forwards;
+                
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: var(--secondary-color);
+                    transition: all 300ms ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+@keyframes hero {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes btn {
+    0% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

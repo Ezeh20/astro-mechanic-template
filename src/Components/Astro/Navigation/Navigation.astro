@@ -1,5 +1,33 @@
-<header>
-  <nav>
-    <p>Logo</p>
+---
+import './Navigation.scss'
+const links = ["services",  "locations", "Faqs"];
+---
+
+<header class='navigation'>
+  <nav class='container nav'>
+    <h1 class='logo'>Jose's</h1>
+    <ul id="nav" class='ul'>
+      {
+        links.map((item) => (
+          <li class='list'>
+            <a href={`#${item}`} class='link'>
+              {item}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <button id="toggle" class='btn'>
+      <i class='ri-menu-3-line icon'></i>
+    </button>
   </nav>
 </header>
+
+<script>
+  const toggle = document.getElementById("toggle");
+  const nav = document.getElementById("nav");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
