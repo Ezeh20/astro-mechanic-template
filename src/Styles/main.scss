@@ -16,6 +16,16 @@
     transition: all 300ms ease-in-out;
 }
 
+::-webkit-scrollbar {
+    display: inline-flex;
+    width: .25vw;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, var(--secondary-color));
+    border-radius: 20px;
+  }
+
 html {
     scroll-behavior: smooth;
 }
