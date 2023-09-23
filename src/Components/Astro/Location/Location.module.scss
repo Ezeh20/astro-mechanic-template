@@ -1,0 +1,42 @@
+.locations {
+    margin-bottom: 5rem;
+
+    .top {
+        .heading {
+            font-size: 24px;
+
+            @media screen and (min-width: 768px) {
+                font-size: 40px;
+            }
+        }
+
+        .subheading {
+            max-width: 1000px;
+            margin-top: 2rem;
+        }
+    }
+
+    .bottom {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+
+        .location {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+            .img {
+                height: 300px;
+                object-fit: cover;
+            }
+
+            .loc,
+            .name {
+                text-transform: uppercase;
+
+            }
+        }
+    }
+}

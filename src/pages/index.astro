@@ -3,6 +3,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../Components/Astro/Hero/Hero.astro";
 import Navigation from "../Components/Astro/Navigation/Navigation.astro";
 import Services from "../Components/Astro/Services/Services.astro";
+import Location from "../Components/Astro/Location/Location.astro";
+import Faq from "../Components/React/Faq/index.js";
 import Footer from "../Components/Astro/Footer/Footer.astro";
 ---
 
@@ -10,5 +12,7 @@ import Footer from "../Components/Astro/Footer/Footer.astro";
   <Navigation />
   <Hero />
   <Services />
+  <Location />
+  <Faq client:load />
   <!-- <Footer /> -->
 </MainLayout>
