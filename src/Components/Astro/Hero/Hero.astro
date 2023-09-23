@@ -5,12 +5,14 @@ const writeUp = `You got a guy. Here at Jose's Automotive, we take care of the c
 const label = "Book an appointment";
 ---
 
-<section class={styles.hero}>
+<section id="#" class={styles.hero}>
   <div class={styles.overlay}>
     <div class={`container ${styles.woo}`}>
       <h3 class={styles.header}>{header}</h3>
       <p class={styles.writeUp}>{writeUp}</p>
-      <button class={styles.btn}>{label}</button>
+      <a href="#contact">
+        <button class={styles.btn}>{label}</button>
+      </a>
     </div>
   </div>
 </section>

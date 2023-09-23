@@ -1,0 +1,29 @@
+.contact {
+    margin: 2rem 0 5rem;
+
+    .top {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        margin-bottom: 1.5rem;
+
+        .heading {
+            color: var(--secondary-color);
+            font-size: 24px;
+
+            @media screen and (min-width: 768px) {
+                font-size: 35px;
+            }
+        }
+    }
+
+    .bottom {
+        @extend .top;
+        margin-bottom: 0;
+        .info {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+    }
+}

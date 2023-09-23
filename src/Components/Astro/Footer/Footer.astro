@@ -1,3 +1,17 @@
-<footer>
-    <p>Footer</p>
+---
+import styles from "./Footer.module.scss";
+const year = new Date().getFullYear();
+const brand = "Jose's";
+const author = "developed by Chijioke Ezeh";
+const copyright = `copyright reserved by jose's ${year}`;
+---
+
+<footer class={styles.footer}>
+  <div class={`container ${styles.content}`}>
+    <a href="#">
+      <p class={styles.brand}>{brand}</p>
+    </a>
+    <p>{author}</p>
+    <p>{copyright}</p>
+  </div>
 </footer>

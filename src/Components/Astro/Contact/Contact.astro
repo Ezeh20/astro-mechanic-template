@@ -1,0 +1,36 @@
+---
+import styles from "./Contact.module.scss";
+const heading = "CONTACT US";
+const subtext = `get in touch today as we are available 24/7. We look forward to hearing from you!`;
+const info = [
+  {
+    name: "Telephone: ",
+    ans: "+234-8103214740",
+  },
+  {
+    name: "Email: ",
+    ans: "jose@gmail.com",
+  },
+  {
+    name: "Head office: ",
+    ans: "1, 7th street down town",
+  },
+];
+---
+
+<section id="contact" class={`container ${styles.contact}`}>
+  <div class={styles.top}>
+    <p class={styles.heading}>{heading}</p>
+    <p class={styles.sub}>{subtext}</p>
+  </div>
+  <div class={styles.bottom}>
+    {
+      info.map((itm) => (
+        <div class={styles.info}>
+          <p class={styles.name}>{itm.name}</p>
+          <p class={styles.ans}>{itm.ans}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>

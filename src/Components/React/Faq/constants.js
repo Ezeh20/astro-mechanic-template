@@ -19,7 +19,7 @@ export const data = [
     },
     {
         id: 3,
-        question: "2 YEAR/24,000 MILE WARRANTY",
+        question: "2 YEARS/24,000 MILE WARRANTY",
         ans: `Nelson's Automotive is proud to offer a 2 year/24,000 mile warranty on parts and labor. Redeem today!`,
     }
 ]

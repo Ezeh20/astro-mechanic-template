@@ -1,24 +1,26 @@
 ---
-import './Navigation.scss'
-const links = ["services",  "locations", "Faqs"];
+import "./Navigation.scss";
+const links = ["services", "locations", "Faqs"];
 ---
 
-<header class='navigation'>
-  <nav class='container nav'>
-    <h1 class='logo'>Jose's</h1>
-    <ul id="nav" class='ul'>
+<header class="navigation">
+  <nav class="container nav">
+    <a href="#">
+      <h1 class="logo">Jose's</h1>
+    </a>
+    <ul id="nav" class="ul">
       {
         links.map((item) => (
-          <li class='list'>
-            <a href={`#${item}`} class='link'>
+          <li class="list">
+            <a href={`#${item}`} class="link">
               {item}
             </a>
           </li>
         ))
       }
     </ul>
-    <button id="toggle" class='btn'>
-      <i class='ri-menu-3-line icon'></i>
+    <button id="toggle" class="btn">
+      <i class="ri-menu-3-line icon"></i>
     </button>
   </nav>
 </header>
