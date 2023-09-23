@@ -1,4 +1,5 @@
 # Astro auto shop template
+![Screenshot (131)](https://github.com/Ezeh20/astro-mechanic-template/assets/29344226/93f384a5-7bbd-4d4f-b338-84ac708536f5)
 
 ### To run locally
 
