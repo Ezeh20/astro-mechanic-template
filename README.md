@@ -18,3 +18,9 @@ Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page
 
 Any static assets, like images, can be placed in the `public/` directory.
 
+## Build after your edits
+To build the hostable folder, you need to run
+```
+npm run build
+```
+This will bundle the entire project which is ready for production in a dist folder. You can the host that folder anywhere you wish.
